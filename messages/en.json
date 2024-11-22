@@ -1,0 +1,50 @@
+{
+  "Metadata": {
+    "title": "Welcome to Meta Store 47",
+    "description": "The best ecommerce website in algria"
+  },
+  "HomePage": {
+    "header": "Listen to the amazing music sound.",
+    "para": "Experience music like never before"
+  },
+  "ValuesPage": {
+    "values": [
+      {
+        "title": "We Ship to 58 Willaya",
+        "description": "Free Shipping For Order above 9000 DA"
+      },
+      {
+        "title": "Payment On Arraivle",
+        "description": "Pay When Your Get Your Order"
+      },
+      {
+        "title": "Quality Assurence",
+        "description": "All The Products Are High Quality"
+      },
+      {
+        "title": "24/7 Support",
+        "description": "For Any Questions Calls Us Any Time"
+      }
+    ]
+  },
+
+  "Card": {
+    "button": "Shop Now",
+    "Unit": "DA"
+  },
+  "ProductPage": {
+    "breadcrumbs": {
+      "home": "Home",
+      "edit": "Product"
+    },
+    "purchaseOptions": {
+      "Unit": "DA",
+      "messenger": "Buy from messenger",
+      "whatsapp": "Buy from WhatsApp",
+      "instagram": "Buy from Instagram"
+    },
+    "description": {
+      "tabTitle": "Description"
+    }
+  }
+}
