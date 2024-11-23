@@ -5,9 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation"; // Import useRouter for navigation
 import Logo from "../../../public/nacer-logo.png";
+import { useTranslations } from "next-intl";
 
 export default function NavBar() {
   const router = useRouter(); // Get access to the Next.js router
+  const t = useTranslations('Navbar');
+
 
   // Function to handle language change
   const handleLanguageChange = (locale) => {
@@ -20,7 +23,7 @@ export default function NavBar() {
   return (
     <header className="border-b font-[sans-serif] tracking-wide relative z-50">
       <section className="py-2 bg-[#1d294f] text-white text-center px-10">
-        <p className="text-sm">Summer sale: Save up to 40%</p>
+        <p className="text-sm">{t("text")}</p>
       </section>
       <div className="flex justify-center items-center w-full px-4 lg:px-10 py-4 relative">
         <div className="w-full h-29 flex justify-between items-center">

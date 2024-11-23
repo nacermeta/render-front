@@ -3,15 +3,19 @@
     "title": "Welcome to Meta Store 47",
     "description": "The best ecommerce website in algria"
   },
+  "Navbar": {
+    "text": "We Ship To 58 Wilaya & Payment On Arraivle"
+  },
   "HomePage": {
-    "header": "Listen to the amazing music sound.",
-    "para": "Experience music like never before"
+    "headerone": "Welcome to ",
+    "headertwo": "Meta Store 47.",
+    "para": "The best ecommerce website in algria"
   },
   "ValuesPage": {
     "values": [
       {
         "title": "We Ship to 58 Willaya",
-        "description": "Free Shipping For Order above 9000 DA"
+        "description": "We Ship Directally After Ordering"
       },
       {
         "title": "Payment On Arraivle",
