@@ -1,23 +1,32 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation"; // Import useRouter for navigation
+import { usePathname, useRouter } from "next/navigation";
 import Logo from "../../../public/nacer-logo.png";
 import { useTranslations } from "next-intl";
 
 export default function NavBar() {
-  const router = useRouter(); // Get access to the Next.js router
+  const pathname = usePathname(); // Get the current pathname
+  const router = useRouter(); // Next.js router for navigation
+  const locale = pathname.split("/")[1] || "en"; // Extract current locale
+  const [language, setLanguage] = useState(locale); // Initialize state with the current locale
   const t = useTranslations('Navbar');
 
 
   // Function to handle language change
-  const handleLanguageChange = (locale) => {
-    const currentPathname = window.location.pathname; // Get the current URL path
-    const newPath = `/${locale}${currentPathname.slice(3)}`; // Replace the first 3 chars to switch language (e.g., "/en" or "/ar")
+  const handleLanguageChange = (event) => {
+    const selectedLanguage = event.target.value;
 
-    router.push(newPath); // Navigate to the new path with the selected locale
+    // Construct the new path
+    const currentPathWithoutLocale = pathname.startsWith(`/${locale}`)
+      ? pathname.replace(`/${locale}`, "")
+      : pathname;
+    const newPath = `/${selectedLanguage}${currentPathWithoutLocale}`;
+
+    setLanguage(selectedLanguage); // Update the language state
+    router.push(newPath); // Navigate to the new locale path
   };
 
   return (
@@ -37,11 +46,24 @@ export default function NavBar() {
             />
           </Link>
           
-        <div className="">
+          <div className="hidden md:flex items-center">
           <select
-            onChange={(e) => handleLanguageChange(e.target.value)} // Handle language change on selection
-            className="px-4 py-2 text-black bg-white rounded-lg hover:bg-gray-200"
-            defaultValue="en"
+            id="language"
+            value={language}
+            onChange={handleLanguageChange}
+            className="px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500"
+          >
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+          </select>
+        </div>
+
+        <div className="flex md:hidden items-center text-xs">
+          <select
+            id="language"
+            value={language}
+            onChange={handleLanguageChange}
+            className="px-2 py-1 text-gray-700 bg-white border border-gray-300 rounded-lg shadow-sm focus:ring-green-500 focus:border-green-500"
           >
             <option value="en">English</option>
             <option value="ar">العربية</option>

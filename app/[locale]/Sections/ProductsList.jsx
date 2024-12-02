@@ -30,14 +30,14 @@ export default function ProductsList({ products }) {
   const productsByCategory = groupProductsByCategory(products);
 
   return (
-    <div className="mx-auto gap-2 px-4 lg:px-8 py-8 w-full">
+    <div className="mx-auto gap-2 px-4 lg:px-8 py-8 w-full max-w-7xl">
       {/* Loop through each category and display products */}
       {Object.keys(productsByCategory).map((category) => (
         <div key={category} className="my-32">
           {/* Display the category name based on the current locale */}
           <h3 className="text-4xl font-extrabold text-gray-800 mb-14">{category}</h3>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {productsByCategory[category].map((product) => (
               <ProductCard key={product._id} product={product} locale={locale} />
             ))}

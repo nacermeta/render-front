@@ -50,5 +50,11 @@
     "description": {
       "tabTitle": "Description"
     }
-  }
+  },
+  "Footer": {
+    "Followus": "Stay connected with us :",
+    "bottom": "© Meta Store 47. All rights reserved.",
+    "made": " Made With",
+    "By": "By"
+}
 }

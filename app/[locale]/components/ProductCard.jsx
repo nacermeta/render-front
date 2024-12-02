@@ -13,7 +13,7 @@ export default function ProductCard({ product, locale }) {
   
     // Truncate the product name if it exceeds 30 characters
    const truncatedName = product.name.length > 50 
-   ? product.name.slice(0, 50) + "..." 
+   ? product.name.slice(0, 35) + "..." 
    : product.name;
   return (
     <Link href={`${locale}/PoductPage/${product.slug.current}`} className="bg-gray-200 rounded-xl cursor-pointer hover:scale-[1.03] transition-all relative overflow-hidden">
