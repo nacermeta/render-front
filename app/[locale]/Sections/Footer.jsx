@@ -11,7 +11,11 @@ export default function Footer() {
 
         <ul className="flex flex-wrap justify-center gap-x-8 gap-4 my-8">
           <li>
-            <a href="#" className="text-xl hover:text-gray-400">
+            <a
+              href="https://m.me/61556503836307"
+              target="_blank"
+              className="text-xl hover:text-gray-400"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="inline w-7 h-7"
@@ -30,7 +34,11 @@ export default function Footer() {
           </li>
 
           <li>
-            <a href="#" className="text-xl hover:text-gray-400">
+            <a
+              href="https://wa.me/+213553185497"
+              target="_blank"
+              className="text-xl hover:text-gray-400"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="inline w-9 h-9"
@@ -63,7 +71,11 @@ export default function Footer() {
           </li>
 
           <li>
-            <a href="#" className="text-xl hover:text-gray-400">
+            <a
+              href="https://www.instagram.com/direct/t/17845926813158532"
+              target="_blank"
+              className="text-xl hover:text-gray-400"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="inline w-9 h-9"
