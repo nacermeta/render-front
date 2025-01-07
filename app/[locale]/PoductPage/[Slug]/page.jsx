@@ -131,15 +131,6 @@ export default function Page() {
 
           <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
             <Link
-              href="https://m.me/61556503836307"
-              target="_blank"
-              type="button"
-              className="flex flex-row items-center justify-center gap-2 min-w-[200px] px-4 py-3 bg-[#0084ff] text-white hover:bg-black outline-1 outline-[#0084ff] text-sm font-semibold rounded-lg transition ease-in-out duration-300"
-            >
-              {t("purchaseOptions.messenger")}
-              <FaFacebookMessenger size={25} />
-            </Link>
-            <Link
               href="https://wa.me/+213553185497"
               target="_blank"
               type="button"
@@ -147,15 +138,6 @@ export default function Page() {
             >
               {t("purchaseOptions.whatsapp")}
               <MdWhatsapp size={25} />
-            </Link>
-            <Link
-              href="https://www.instagram.com/direct/t/17845926813158532"
-              target="_blank"
-              type="button"
-              className="flex flex-row items-center justify-center gap-2 min-w-[200px] px-4 py-3 bg-gradient-to-r from-pink-500 to-yellow-500 hover:bg-black text-white text-sm font-semibold rounded-lg transition ease-in-out duration-300"
-            >
-              {t("purchaseOptions.instagram")}
-              <FaInstagram size={25} />
             </Link>
           </div>
 
